@@ -121,3 +121,5 @@ fisher.test(tablaUrbano)
 # p-value es menor que 0.05, por lo que rechazamos la hipótesis de que las proporciones son iguales
 # el odds ratio es de 0.56, lo que significa que la probabilidad de que un hombre este desempleado en el medio urbano
 # es 0.56 veces la probabilidad de que una mujer este desempleada en el medio urbano
+
+# miles de personas participan en al dia del campo de reinosa
