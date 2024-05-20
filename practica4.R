@@ -97,8 +97,8 @@ t.test(mice2$after, mice2$before, paired = TRUE) # para comparar dos medias con 
 
 # tabla de contingencia
 
-M = as.table(rbind(c(67,76,57), c(48,73,79)))
-dimnames(M) = list(c("trat", "placebo"), c("mejora", "igual", "empeora"))
+M <- as.table(rbind(c(67,76,57), c(48,73,79)))
+dimnames(M) <- list(c("trat", "placebo"), c("mejora", "igual", "empeora"))
 barplot(M, beside = TRUE, legend = TRUE, args.legend = c(x=4.25, y = 80, border= NULL), col = c("orange", "yellow"))
 
 chisq.test(M)
@@ -122,4 +122,20 @@ fisher.test(tablaUrbano)
 # el odds ratio es de 0.56, lo que significa que la probabilidad de que un hombre este desempleado en el medio urbano
 # es 0.56 veces la probabilidad de que una mujer este desempleada en el medio urbano
 
-# miles de personas participan en al dia del campo de reinosa
+# evidencias de desempleo mayor en mujeres en medio urbano que en rural
+
+tablaMujeres <- matrix(c(616, 578, 384, 422), ncol = 2, dimnames = list(c("Urbano", "Rural"), c("Des", "Emp")))
+tablaMujeres
+
+fisher.test(tablaMujeres)
+
+# Por lo tanto no hay evidencia para rechazar la hipótesis
+
+###
+
+data("CO2")
+head(CO2)
+CO2
+help(CO2)
+
+boxplot(uptake ~ Type, data = CO2, col = c("orange", "yellow"))
